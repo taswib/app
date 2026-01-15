@@ -29,18 +29,16 @@
     <iframe id="secret-frame" src="" allow="fullscreen"></iframe>
 
     <script>
-        // هذا هو رابط موقعك ولكن مشفر بصيغة Base64
-        // الرابط المشفر: https://static-canvas--twheebalsalahiu.replit.app
         var protectedUrl = "aHR0cHM6Ly9zdGF0aWMtY2FudmFzLS10d2hlZWJhbHNhbGFoaXUucmVwbGl0LmFwcA==";
 
-        // دالة لفك التشفير ووضع الرابط داخل الإطار
+      
         function loadFrame() {
             var frame = document.getElementById('secret-frame');
-            // atob هي دالة في المتصفح تقوم بفك تشفير Base64
+         
             frame.src = atob(protectedUrl);
         }
 
-        // تشغيل الدالة فور تحميل الصفحة
+       
         window.onload = loadFrame;
     </script>
 </body>
